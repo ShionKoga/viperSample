@@ -1,10 +1,3 @@
-//
-//  SceneDelegate.swift
-//  viperSample
-//
-//  Created by 14inchの史苑 on 2022/11/06.
-//
-
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
@@ -13,9 +6,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        guard let windowScene = (scene as? UIWindowScene) else { return }
-        let window = UIWindow(windowScene: windowScene)
-        window.rootViewController = ViewController.init()
+        guard let scene = (scene as? UIWindowScene) else { return }
+        print("----------------")
+        let window = UIWindow(windowScene: scene)
+        let todoListViewController = TodoListRouter.assembleModules()
+        let navigationController = UINavigationController(rootViewController: todoListViewController)
+        window.rootViewController = navigationController
         self.window = window
         window.makeKeyAndVisible()
     }
