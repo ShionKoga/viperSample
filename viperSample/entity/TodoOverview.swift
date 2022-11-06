@@ -1,6 +1,6 @@
 import Foundation
 
-struct TodoListViewData {
+struct TodoOverview {
     let todoId: Int
     let title: String
 }

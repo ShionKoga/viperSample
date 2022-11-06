@@ -1,27 +1,17 @@
 import UIKit
 
-protocol TodoDetailViewProtocol: TransitionProtocol {
-    var presenter: TodoDetailPresenterProtocol? { get set }
-    
-    func showTodo(_ todo: TodoDetailViewData)
+protocol TodoDetailPresenter: AnyObject {
+    func viewWillAppear()
+    func getTodoDetail() -> TodoDetail
 }
 
-final class TodoDetailViewController: UIViewController, TodoDetailViewProtocol {
-    var presenter: TodoDetailPresenterProtocol?
+final class TodoDetailViewController: UIViewController {
+    var presenter: TodoDetailPresenter?
     
     let titleLabel: UILabel = UILabel()
     let detailLabel: UILabel = UILabel()
     let statusLabel: UILabel = UILabel()
     let deadLineLabel: UILabel = UILabel()
-    
-    var viewData = TodoDetailViewData(todoId: 0, title: "", detail: "", isCompleted: false, deadLine: Date()) {
-        didSet {
-            self.titleLabel.text = self.viewData.title
-            self.detailLabel.text = self.viewData.detail
-            self.statusLabel.text = self.viewData.isCompleted ? "完了" : "未完了"
-            self.deadLineLabel.text = self.viewData.detail.description
-        }
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,8 +38,15 @@ final class TodoDetailViewController: UIViewController, TodoDetailViewProtocol {
         view.addSubview(statusLabel)
         view.addSubview(deadLineLabel)
     }
-    
-    func showTodo(_ todo: TodoDetailViewData) {
-        self.viewData = todo
+}
+
+extension TodoDetailViewController: Reloadable {
+    func reload() {
+        guard let presenter = self.presenter else { return }
+        let todoDetail = presenter.getTodoDetail()
+        self.titleLabel.text = todoDetail.title
+        self.detailLabel.text = todoDetail.detail
+        self.statusLabel.text = todoDetail.isCompleted ? "完了" : "未完了"
+        self.deadLineLabel.text = todoDetail.detail.description
     }
 }

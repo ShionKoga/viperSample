@@ -1,17 +1,14 @@
 import UIKit
 
-protocol TodoListViewProtocol: TransitionProtocol {
-    var presenter: TodoListPresenterProtocol? { get set }
-    func showTodos(_ todos: [TodoListViewData])
+protocol TodoListPresenter: AnyObject {
+    func viewWillAppear()
+    func didSelectRow(at todoId: Int)
+    func getTodoCount() -> Int
+    func getTodoOverview(at index: Int) -> TodoOverview?
 }
 
-final class TodoListViewController: UITableViewController, TodoListViewProtocol {
-    var presenter: TodoListPresenterProtocol?
-    var viewDatas = [TodoListViewData]() {
-        didSet {
-            self.tableView.reloadData()
-        }
-    }
+final class TodoListViewController: UITableViewController {
+    var presenter: TodoListPresenter?
     
     init() {
         super.init(nibName: nil, bundle: nil)
@@ -34,21 +31,27 @@ final class TodoListViewController: UITableViewController, TodoListViewProtocol 
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.viewDatas.count
+        guard let presenter = self.presenter else { return 0}
+        return presenter.getTodoCount()
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TodoListTableViewCell", for: indexPath)
-        cell.textLabel?.text = self.viewDatas[indexPath.row].title
+        guard let presenter = self.presenter else { return cell }
+        guard let todoOverview = presenter.getTodoOverview(at: indexPath.row) else { return cell }
+        cell.textLabel?.text = todoOverview.title
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let todoId = self.viewDatas[indexPath.row].todoId
-        self.presenter?.didSelectRow(todoId)
-    }
-    
-    func showTodos(_ todos: [TodoListViewData]) {
-        self.viewDatas = todos
+        self.presenter?.didSelectRow(at: indexPath.row)
     }
 }
+
+extension TodoListViewController: Reloadable {
+    func reload() {
+        self.tableView.reloadData()
+    }
+}
+
+extension TodoListViewController: TransitionProtocol {}
