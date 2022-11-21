@@ -34,6 +34,8 @@
 		11675679292A489100FB28CD /* SpyTodoListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11675678292A489100FB28CD /* SpyTodoListRouter.swift */; };
 		1167567B292A4F3A00FB28CD /* SpyReloadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1167567A292A4F3A00FB28CD /* SpyReloadable.swift */; };
 		1167567E292A51CD00FB28CD /* TodoBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1167567D292A51CD00FB28CD /* TodoBuilder.swift */; };
+		11675680292B7CF900FB28CD /* TodoListInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1167567F292B7CF800FB28CD /* TodoListInteractorTest.swift */; };
+		11675682292B7E1300FB28CD /* SpyPresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11675681292B7E1300FB28CD /* SpyPresenterDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +85,8 @@
 		11675678292A489100FB28CD /* SpyTodoListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyTodoListRouter.swift; sourceTree = "<group>"; };
 		1167567A292A4F3A00FB28CD /* SpyReloadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyReloadable.swift; sourceTree = "<group>"; };
 		1167567D292A51CD00FB28CD /* TodoBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoBuilder.swift; sourceTree = "<group>"; };
+		1167567F292B7CF800FB28CD /* TodoListInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListInteractorTest.swift; sourceTree = "<group>"; };
+		11675681292B7E1300FB28CD /* SpyPresenterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyPresenterDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				116755EC291799CB00FB28CD /* TodoListPresenterTest.swift */,
+				11675681292B7E1300FB28CD /* SpyPresenterDelegate.swift */,
 			);
 			path = presenter;
 			sourceTree = "<group>";
@@ -231,6 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				11675676292A20DA00FB28CD /* SpyTodoListInteractor.swift */,
+				1167567F292B7CF800FB28CD /* TodoListInteractorTest.swift */,
 			);
 			path = interactor;
 			sourceTree = "<group>";
@@ -420,6 +426,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11675682292B7E1300FB28CD /* SpyPresenterDelegate.swift in Sources */,
+				11675680292B7CF900FB28CD /* TodoListInteractorTest.swift in Sources */,
 				116755ED291799CB00FB28CD /* TodoListPresenterTest.swift in Sources */,
 				1167567E292A51CD00FB28CD /* TodoBuilder.swift in Sources */,
 				1167567B292A4F3A00FB28CD /* SpyReloadable.swift in Sources */,
