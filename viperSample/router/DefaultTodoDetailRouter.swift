@@ -10,7 +10,6 @@ final class DefaultTodoDetailRouter: TodoDetailRouter {
         let view = TodoDetailViewController()
         let presenter = DefaultTodoDetailPresenter()
         let interactor = DefaultTodoDetailInteractor()
-        let router = DefaultTodoDetailRouter()
         
         view.presenter = presenter
         presenter.reloadable = view

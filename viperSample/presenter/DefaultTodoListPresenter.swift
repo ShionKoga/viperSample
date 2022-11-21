@@ -13,7 +13,7 @@ final class DefaultTodoListPresenter: TodoListPresenter {
     var interactor: TodoListInteractor?
     var router: TodoListRouter?
     
-    var todoOverviews = [TodoOverview]()
+    private var todoOverviews = [TodoOverview]()
     
     func viewWillAppear() {
         self.interactor?.getAllTodo()

@@ -11,7 +11,7 @@
 		116755D8291799CA00FB28CD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116755D7291799CA00FB28CD /* SceneDelegate.swift */; };
 		116755DF291799CA00FB28CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 116755DE291799CA00FB28CD /* Assets.xcassets */; };
 		116755E2291799CA00FB28CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 116755E0291799CA00FB28CD /* LaunchScreen.storyboard */; };
-		116755ED291799CB00FB28CD /* viperSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116755EC291799CB00FB28CD /* viperSampleTests.swift */; };
+		116755ED291799CB00FB28CD /* TodoListPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116755EC291799CB00FB28CD /* TodoListPresenterTest.swift */; };
 		116755F7291799CB00FB28CD /* viperSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116755F6291799CB00FB28CD /* viperSampleUITests.swift */; };
 		116755F9291799CB00FB28CD /* viperSampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116755F8291799CB00FB28CD /* viperSampleUITestsLaunchTests.swift */; };
 		116756462917AD2900FB28CD /* DefaultTodoListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116756452917AD2800FB28CD /* DefaultTodoListRouter.swift */; };
@@ -28,6 +28,12 @@
 		116756652917C5D700FB28CD /* DefaultTodoDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116756642917C5D700FB28CD /* DefaultTodoDetailInteractor.swift */; };
 		116756672917C70B00FB28CD /* TodoDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116756662917C70B00FB28CD /* TodoDetail.swift */; };
 		116756692917EB9400FB28CD /* Reloadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116756682917EB9400FB28CD /* Reloadable.swift */; };
+		1167566E292A188500FB28CD /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = 1167566D292A188500FB28CD /* Nimble */; };
+		11675671292A18AD00FB28CD /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = 11675670292A18AD00FB28CD /* Quick */; };
+		11675677292A20DA00FB28CD /* SpyTodoListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11675676292A20DA00FB28CD /* SpyTodoListInteractor.swift */; };
+		11675679292A489100FB28CD /* SpyTodoListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11675678292A489100FB28CD /* SpyTodoListRouter.swift */; };
+		1167567B292A4F3A00FB28CD /* SpyReloadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1167567A292A4F3A00FB28CD /* SpyReloadable.swift */; };
+		1167567E292A51CD00FB28CD /* TodoBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1167567D292A51CD00FB28CD /* TodoBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +61,7 @@
 		116755E1291799CA00FB28CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		116755E3291799CA00FB28CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		116755E8291799CB00FB28CD /* viperSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = viperSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		116755EC291799CB00FB28CD /* viperSampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viperSampleTests.swift; sourceTree = "<group>"; };
+		116755EC291799CB00FB28CD /* TodoListPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListPresenterTest.swift; sourceTree = "<group>"; };
 		116755F2291799CB00FB28CD /* viperSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = viperSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		116755F6291799CB00FB28CD /* viperSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viperSampleUITests.swift; sourceTree = "<group>"; };
 		116755F8291799CB00FB28CD /* viperSampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viperSampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -73,6 +79,10 @@
 		116756642917C5D700FB28CD /* DefaultTodoDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTodoDetailInteractor.swift; sourceTree = "<group>"; };
 		116756662917C70B00FB28CD /* TodoDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetail.swift; sourceTree = "<group>"; };
 		116756682917EB9400FB28CD /* Reloadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reloadable.swift; sourceTree = "<group>"; };
+		11675676292A20DA00FB28CD /* SpyTodoListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyTodoListInteractor.swift; sourceTree = "<group>"; };
+		11675678292A489100FB28CD /* SpyTodoListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyTodoListRouter.swift; sourceTree = "<group>"; };
+		1167567A292A4F3A00FB28CD /* SpyReloadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyReloadable.swift; sourceTree = "<group>"; };
+		1167567D292A51CD00FB28CD /* TodoBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +97,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11675671292A18AD00FB28CD /* Quick in Frameworks */,
+				1167566E292A188500FB28CD /* Nimble in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,7 +153,11 @@
 		116755EB291799CB00FB28CD /* viperSampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				116755EC291799CB00FB28CD /* viperSampleTests.swift */,
+				1167567C292A51BD00FB28CD /* entity */,
+				11675675292A1D3300FB28CD /* view */,
+				11675674292A1D2900FB28CD /* router */,
+				11675673292A1D1800FB28CD /* interactor */,
+				11675672292A1CFB00FB28CD /* presenter */,
 			);
 			path = viperSampleTests;
 			sourceTree = "<group>";
@@ -203,6 +219,46 @@
 			path = presenter;
 			sourceTree = "<group>";
 		};
+		11675672292A1CFB00FB28CD /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				116755EC291799CB00FB28CD /* TodoListPresenterTest.swift */,
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		11675673292A1D1800FB28CD /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+				11675676292A20DA00FB28CD /* SpyTodoListInteractor.swift */,
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		11675674292A1D2900FB28CD /* router */ = {
+			isa = PBXGroup;
+			children = (
+				11675678292A489100FB28CD /* SpyTodoListRouter.swift */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		11675675292A1D3300FB28CD /* view */ = {
+			isa = PBXGroup;
+			children = (
+				1167567A292A4F3A00FB28CD /* SpyReloadable.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		1167567C292A51BD00FB28CD /* entity */ = {
+			isa = PBXGroup;
+			children = (
+				1167567D292A51CD00FB28CD /* TodoBuilder.swift */,
+			);
+			path = entity;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -237,6 +293,10 @@
 				116755EA291799CB00FB28CD /* PBXTargetDependency */,
 			);
 			name = viperSampleTests;
+			packageProductDependencies = (
+				1167566D292A188500FB28CD /* Nimble */,
+				11675670292A18AD00FB28CD /* Quick */,
+			);
 			productName = viperSampleTests;
 			productReference = 116755E8291799CB00FB28CD /* viperSampleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -291,6 +351,10 @@
 				Base,
 			);
 			mainGroup = 116755C9291799CA00FB28CD;
+			packageReferences = (
+				1167566C292A188500FB28CD /* XCRemoteSwiftPackageReference "Nimble" */,
+				1167566F292A18AD00FB28CD /* XCRemoteSwiftPackageReference "Quick" */,
+			);
 			productRefGroup = 116755D3291799CA00FB28CD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -356,7 +420,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				116755ED291799CB00FB28CD /* viperSampleTests.swift in Sources */,
+				116755ED291799CB00FB28CD /* TodoListPresenterTest.swift in Sources */,
+				1167567E292A51CD00FB28CD /* TodoBuilder.swift in Sources */,
+				1167567B292A4F3A00FB28CD /* SpyReloadable.swift in Sources */,
+				11675679292A489100FB28CD /* SpyTodoListRouter.swift in Sources */,
+				11675677292A20DA00FB28CD /* SpyTodoListInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -680,6 +748,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1167566C292A188500FB28CD /* XCRemoteSwiftPackageReference "Nimble" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Nimble.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		1167566F292A18AD00FB28CD /* XCRemoteSwiftPackageReference "Quick" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Quick.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1167566D292A188500FB28CD /* Nimble */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1167566C292A188500FB28CD /* XCRemoteSwiftPackageReference "Nimble" */;
+			productName = Nimble;
+		};
+		11675670292A18AD00FB28CD /* Quick */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1167566F292A18AD00FB28CD /* XCRemoteSwiftPackageReference "Quick" */;
+			productName = Quick;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 116755CA291799CA00FB28CD /* Project object */;
 }
