@@ -1,27 +1,35 @@
 import Foundation
 
-protocol TodoListInteractor: AnyObject {
+protocol TodoListUseCase: AnyObject {
     func getAllTodo()
 }
 
-protocol TodoListRouter: AnyObject {
+protocol TodoListWireframe: AnyObject {
     func transitionToDetailView(_ todoId: Int)
 }
 
-final class DefaultTodoListPresenter: TodoListPresenter {
-    weak var reloadable: Reloadable?
-    var interactor: TodoListInteractor?
-    var router: TodoListRouter?
+protocol TodoListView: AnyObject {
+    func showTodoOverview(_ todoOverviews: [TodoOverview])
+}
+
+final class TodoListPresenter: TodoListPresentation {
+    weak var view: TodoListView?
+    var interactor: TodoListUseCase!
+    var router: TodoListWireframe!
     
-    private var todoOverviews = [TodoOverview]()
+    private var todoOverviews = [TodoOverview]() {
+        didSet {
+            self.view?.showTodoOverview(todoOverviews)
+        }
+    }
     
     func viewWillAppear() {
-        self.interactor?.getAllTodo()
+        self.interactor.getAllTodo()
     }
     
     func didSelectRow(at index: Int) {
         let todoId = self.todoOverviews[index].todoId
-        self.router?.transitionToDetailView(todoId)
+        self.router.transitionToDetailView(todoId)
     }
     
     func getTodoCount() -> Int {
@@ -36,12 +44,11 @@ final class DefaultTodoListPresenter: TodoListPresenter {
     }
 }
 
-extension DefaultTodoListPresenter: PresenterDelegate {
+extension TodoListPresenter: TodoListInteractorOutput {
     func setData(_ todoList: [Todo]) {
         let todoOverviews = todoList.map { todo in
             return TodoOverview(todoId: todo.id, title: todo.title)
         }
         self.todoOverviews = todoOverviews
-        self.reloadable?.reload()
     }
 }

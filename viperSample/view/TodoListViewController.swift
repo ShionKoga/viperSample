@@ -1,6 +1,6 @@
 import UIKit
 
-protocol TodoListPresenter: AnyObject {
+protocol TodoListPresentation: AnyObject {
     func viewWillAppear()
     func didSelectRow(at todoId: Int)
     func getTodoCount() -> Int
@@ -8,14 +8,11 @@ protocol TodoListPresenter: AnyObject {
 }
 
 final class TodoListViewController: UITableViewController {
-    var presenter: TodoListPresenter?
-    
-    init() {
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    var presenter: TodoListPresenter!
+    var todoOverviews: [TodoOverview] = [] {
+        didSet {
+            tableView.reloadData()
+        }
     }
     
     override func viewDidLoad() {
@@ -27,7 +24,7 @@ final class TodoListViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        self.presenter?.viewWillAppear()
+        self.presenter.viewWillAppear()
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -48,9 +45,9 @@ final class TodoListViewController: UITableViewController {
     }
 }
 
-extension TodoListViewController: Reloadable {
-    func reload() {
-        self.tableView.reloadData()
+extension TodoListViewController: TodoListView {
+    func showTodoOverview(_ todoOverviews: [TodoOverview]) {
+        self.todoOverviews = todoOverviews
     }
 }
 

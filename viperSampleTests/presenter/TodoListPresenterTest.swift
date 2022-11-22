@@ -6,10 +6,10 @@ import Foundation
 class TodoListPresenterTest: QuickSpec {
     override func spec() {
         describe("DefaultTodoListPresenter") {
-            var presenter: DefaultTodoListPresenter!
+            var presenter: TodoListPresenter!
             
             beforeEach {
-                presenter = DefaultTodoListPresenter()
+                presenter = TodoListPresenter()
             }
             
             context("getTodoCount") {
@@ -108,13 +108,13 @@ class TodoListPresenterTest: QuickSpec {
                     expect(presenter.getTodoOverview(at: 0)?.title).to(equal("hoge"))
                 }
                 
-                it("calls reloadable reload") {
-                    let spyReloadable = SpyReloadable()
-                    presenter.reloadable = spyReloadable
+                it("passes correct data to view") {
+                    let spyTodoListView = SpyTodoListViewController()
+                    presenter.view = spyTodoListView
                     
                     presenter.setData([Todo.default])
                     
-                    expect(spyReloadable.reloadable_wasCalled).to(beTrue())
+                    expect(spyTodoListView.showTodoOverview_argument_todoOverview).to(equal([TodoOverview(todoId: 0, title: "")]))
                 }
             }
         }

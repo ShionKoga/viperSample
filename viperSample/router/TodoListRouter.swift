@@ -9,28 +9,28 @@ protocol TransitionProtocol: AnyObject {
     func dismiss(animated: Bool, completion: (() -> Void))
 }
 
-final class DefaultTodoListRouter: TodoListRouter {
+final class TodoListRouter: TodoListWireframe {
     
     weak var view: TransitionProtocol?
     
     static func assembleModules() -> UIViewController {
         let view = TodoListViewController()
-        let presenter = DefaultTodoListPresenter()
-        let interactor = DefaultTodoListInteractor()
-        let router = DefaultTodoListRouter()
+        let presenter = TodoListPresenter()
+        let interactor = TodoListInteractor()
+        let router = TodoListRouter()
         
         view.presenter = presenter
-        presenter.reloadable = view
+        presenter.view = view
         presenter.interactor = interactor
         presenter.router = router
-        interactor.presenterDelegate = presenter
+        interactor.output = presenter
         router.view = view
         
         return view
     }
     
     func transitionToDetailView(_ todoId: Int) {
-        let detailView = DefaultTodoDetailRouter.assembleModules(todoId)
+        let detailView = TodoDetailRouter.assembleModules(todoId)
         self.view?.pushViewController(detailView, animated: true)
     }
 }

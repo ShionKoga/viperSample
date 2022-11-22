@@ -5,24 +5,24 @@ import Nimble
 
 class TodoListInteractorTest: QuickSpec {
     override func spec() {
-        var interactor: DefaultTodoListInteractor!
+        var interactor: TodoListInteractor!
         
         beforeEach {
-            interactor = DefaultTodoListInteractor()
+            interactor = TodoListInteractor()
         }
         
         context("getAllTodo") {
-            var spyPresenterDelegate: SpyPresenterDelegate!
+            var spyTodoListPresenter: SpyTodoListPrsenter!
             beforeEach {
-                spyPresenterDelegate = SpyPresenterDelegate()
-                interactor.presenterDelegate = spyPresenterDelegate
+                spyTodoListPresenter = SpyTodoListPrsenter()
+                interactor.output = spyTodoListPresenter
             }
             
             it("passes todos in TodoStore to presenterDelegate setData") {
                 interactor.getAllTodo()
                 
                 
-                expect(spyPresenterDelegate.setData_argument_todoList).to(equal(TodoStore.shared.todos))
+                expect(spyTodoListPresenter.setData_argument_todoList).to(equal(TodoStore.shared.todos))
             }
         }
     }

@@ -14,28 +14,28 @@
 		116755ED291799CB00FB28CD /* TodoListPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116755EC291799CB00FB28CD /* TodoListPresenterTest.swift */; };
 		116755F7291799CB00FB28CD /* viperSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116755F6291799CB00FB28CD /* viperSampleUITests.swift */; };
 		116755F9291799CB00FB28CD /* viperSampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116755F8291799CB00FB28CD /* viperSampleUITestsLaunchTests.swift */; };
-		116756462917AD2900FB28CD /* DefaultTodoListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116756452917AD2800FB28CD /* DefaultTodoListRouter.swift */; };
+		116756462917AD2900FB28CD /* TodoListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116756452917AD2800FB28CD /* TodoListRouter.swift */; };
 		116756482917B06100FB28CD /* TodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116756472917B06100FB28CD /* TodoListViewController.swift */; };
 		1167564A2917B3E900FB28CD /* TransitionProotocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116756492917B3E900FB28CD /* TransitionProotocol.swift */; };
-		1167564C2917B6CC00FB28CD /* DefaultTodoListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1167564B2917B6CC00FB28CD /* DefaultTodoListPresenter.swift */; };
+		1167564C2917B6CC00FB28CD /* TodoListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1167564B2917B6CC00FB28CD /* TodoListPresenter.swift */; };
 		1167564E2917B79800FB28CD /* TodoOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1167564D2917B79800FB28CD /* TodoOverview.swift */; };
 		116756522917BBB800FB28CD /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116756512917BBB800FB28CD /* Todo.swift */; };
-		116756542917BC8500FB28CD /* DefaultTodoListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116756532917BC8500FB28CD /* DefaultTodoListInteractor.swift */; };
+		116756542917BC8500FB28CD /* TodoListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116756532917BC8500FB28CD /* TodoListInteractor.swift */; };
 		116756562917BD9900FB28CD /* TodoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116756552917BD9900FB28CD /* TodoStore.swift */; };
-		116756582917C0C700FB28CD /* DefaultTodoDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116756572917C0C700FB28CD /* DefaultTodoDetailRouter.swift */; };
+		116756582917C0C700FB28CD /* TodoDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116756572917C0C700FB28CD /* TodoDetailRouter.swift */; };
 		116756612917C41400FB28CD /* TodoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116756602917C41400FB28CD /* TodoDetailViewController.swift */; };
-		116756632917C4D900FB28CD /* DefaultTodoDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116756622917C4D900FB28CD /* DefaultTodoDetailPresenter.swift */; };
-		116756652917C5D700FB28CD /* DefaultTodoDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116756642917C5D700FB28CD /* DefaultTodoDetailInteractor.swift */; };
+		116756632917C4D900FB28CD /* TodoDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116756622917C4D900FB28CD /* TodoDetailPresenter.swift */; };
+		116756652917C5D700FB28CD /* TodoDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116756642917C5D700FB28CD /* TodoDetailInteractor.swift */; };
 		116756672917C70B00FB28CD /* TodoDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116756662917C70B00FB28CD /* TodoDetail.swift */; };
-		116756692917EB9400FB28CD /* Reloadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116756682917EB9400FB28CD /* Reloadable.swift */; };
 		1167566E292A188500FB28CD /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = 1167566D292A188500FB28CD /* Nimble */; };
 		11675671292A18AD00FB28CD /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = 11675670292A18AD00FB28CD /* Quick */; };
 		11675677292A20DA00FB28CD /* SpyTodoListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11675676292A20DA00FB28CD /* SpyTodoListInteractor.swift */; };
 		11675679292A489100FB28CD /* SpyTodoListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11675678292A489100FB28CD /* SpyTodoListRouter.swift */; };
-		1167567B292A4F3A00FB28CD /* SpyReloadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1167567A292A4F3A00FB28CD /* SpyReloadable.swift */; };
+		1167567B292A4F3A00FB28CD /* SpyTodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1167567A292A4F3A00FB28CD /* SpyTodoListViewController.swift */; };
 		1167567E292A51CD00FB28CD /* TodoBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1167567D292A51CD00FB28CD /* TodoBuilder.swift */; };
 		11675680292B7CF900FB28CD /* TodoListInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1167567F292B7CF800FB28CD /* TodoListInteractorTest.swift */; };
 		11675682292B7E1300FB28CD /* SpyPresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11675681292B7E1300FB28CD /* SpyPresenterDelegate.swift */; };
+		11675684292B80E300FB28CD /* TodoListViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11675683292B80E300FB28CD /* TodoListViewControllerTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,26 +67,26 @@
 		116755F2291799CB00FB28CD /* viperSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = viperSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		116755F6291799CB00FB28CD /* viperSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viperSampleUITests.swift; sourceTree = "<group>"; };
 		116755F8291799CB00FB28CD /* viperSampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viperSampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		116756452917AD2800FB28CD /* DefaultTodoListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTodoListRouter.swift; sourceTree = "<group>"; };
+		116756452917AD2800FB28CD /* TodoListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListRouter.swift; sourceTree = "<group>"; };
 		116756472917B06100FB28CD /* TodoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewController.swift; sourceTree = "<group>"; };
 		116756492917B3E900FB28CD /* TransitionProotocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionProotocol.swift; sourceTree = "<group>"; };
-		1167564B2917B6CC00FB28CD /* DefaultTodoListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTodoListPresenter.swift; sourceTree = "<group>"; };
+		1167564B2917B6CC00FB28CD /* TodoListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListPresenter.swift; sourceTree = "<group>"; };
 		1167564D2917B79800FB28CD /* TodoOverview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoOverview.swift; sourceTree = "<group>"; };
 		116756512917BBB800FB28CD /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
-		116756532917BC8500FB28CD /* DefaultTodoListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTodoListInteractor.swift; sourceTree = "<group>"; };
+		116756532917BC8500FB28CD /* TodoListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListInteractor.swift; sourceTree = "<group>"; };
 		116756552917BD9900FB28CD /* TodoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoStore.swift; sourceTree = "<group>"; };
-		116756572917C0C700FB28CD /* DefaultTodoDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTodoDetailRouter.swift; sourceTree = "<group>"; };
+		116756572917C0C700FB28CD /* TodoDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetailRouter.swift; sourceTree = "<group>"; };
 		116756602917C41400FB28CD /* TodoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetailViewController.swift; sourceTree = "<group>"; };
-		116756622917C4D900FB28CD /* DefaultTodoDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTodoDetailPresenter.swift; sourceTree = "<group>"; };
-		116756642917C5D700FB28CD /* DefaultTodoDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTodoDetailInteractor.swift; sourceTree = "<group>"; };
+		116756622917C4D900FB28CD /* TodoDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetailPresenter.swift; sourceTree = "<group>"; };
+		116756642917C5D700FB28CD /* TodoDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetailInteractor.swift; sourceTree = "<group>"; };
 		116756662917C70B00FB28CD /* TodoDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetail.swift; sourceTree = "<group>"; };
-		116756682917EB9400FB28CD /* Reloadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reloadable.swift; sourceTree = "<group>"; };
 		11675676292A20DA00FB28CD /* SpyTodoListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyTodoListInteractor.swift; sourceTree = "<group>"; };
 		11675678292A489100FB28CD /* SpyTodoListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyTodoListRouter.swift; sourceTree = "<group>"; };
-		1167567A292A4F3A00FB28CD /* SpyReloadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyReloadable.swift; sourceTree = "<group>"; };
+		1167567A292A4F3A00FB28CD /* SpyTodoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyTodoListViewController.swift; sourceTree = "<group>"; };
 		1167567D292A51CD00FB28CD /* TodoBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoBuilder.swift; sourceTree = "<group>"; };
 		1167567F292B7CF800FB28CD /* TodoListInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListInteractorTest.swift; sourceTree = "<group>"; };
 		11675681292B7E1300FB28CD /* SpyPresenterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyPresenterDelegate.swift; sourceTree = "<group>"; };
+		11675683292B80E300FB28CD /* TodoListViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewControllerTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,8 +198,8 @@
 			isa = PBXGroup;
 			children = (
 				116756552917BD9900FB28CD /* TodoStore.swift */,
-				116756642917C5D700FB28CD /* DefaultTodoDetailInteractor.swift */,
-				116756532917BC8500FB28CD /* DefaultTodoListInteractor.swift */,
+				116756642917C5D700FB28CD /* TodoDetailInteractor.swift */,
+				116756532917BC8500FB28CD /* TodoListInteractor.swift */,
 			);
 			path = interactor;
 			sourceTree = "<group>";
@@ -207,8 +207,8 @@
 		1167565E2917C36F00FB28CD /* router */ = {
 			isa = PBXGroup;
 			children = (
-				116756572917C0C700FB28CD /* DefaultTodoDetailRouter.swift */,
-				116756452917AD2800FB28CD /* DefaultTodoListRouter.swift */,
+				116756572917C0C700FB28CD /* TodoDetailRouter.swift */,
+				116756452917AD2800FB28CD /* TodoListRouter.swift */,
 			);
 			path = router;
 			sourceTree = "<group>";
@@ -216,9 +216,8 @@
 		1167565F2917C37F00FB28CD /* presenter */ = {
 			isa = PBXGroup;
 			children = (
-				1167564B2917B6CC00FB28CD /* DefaultTodoListPresenter.swift */,
-				116756682917EB9400FB28CD /* Reloadable.swift */,
-				116756622917C4D900FB28CD /* DefaultTodoDetailPresenter.swift */,
+				1167564B2917B6CC00FB28CD /* TodoListPresenter.swift */,
+				116756622917C4D900FB28CD /* TodoDetailPresenter.swift */,
 			);
 			path = presenter;
 			sourceTree = "<group>";
@@ -252,7 +251,8 @@
 		11675675292A1D3300FB28CD /* view */ = {
 			isa = PBXGroup;
 			children = (
-				1167567A292A4F3A00FB28CD /* SpyReloadable.swift */,
+				1167567A292A4F3A00FB28CD /* SpyTodoListViewController.swift */,
+				11675683292B80E300FB28CD /* TodoListViewControllerTest.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -404,20 +404,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				1167564E2917B79800FB28CD /* TodoOverview.swift in Sources */,
-				1167564C2917B6CC00FB28CD /* DefaultTodoListPresenter.swift in Sources */,
+				1167564C2917B6CC00FB28CD /* TodoListPresenter.swift in Sources */,
 				116756672917C70B00FB28CD /* TodoDetail.swift in Sources */,
 				1167564A2917B3E900FB28CD /* TransitionProotocol.swift in Sources */,
 				116755D6291799CA00FB28CD /* AppDelegate.swift in Sources */,
 				116756562917BD9900FB28CD /* TodoStore.swift in Sources */,
-				116756462917AD2900FB28CD /* DefaultTodoListRouter.swift in Sources */,
+				116756462917AD2900FB28CD /* TodoListRouter.swift in Sources */,
 				116755D8291799CA00FB28CD /* SceneDelegate.swift in Sources */,
-				116756542917BC8500FB28CD /* DefaultTodoListInteractor.swift in Sources */,
+				116756542917BC8500FB28CD /* TodoListInteractor.swift in Sources */,
 				116756482917B06100FB28CD /* TodoListViewController.swift in Sources */,
-				116756632917C4D900FB28CD /* DefaultTodoDetailPresenter.swift in Sources */,
-				116756692917EB9400FB28CD /* Reloadable.swift in Sources */,
-				116756652917C5D700FB28CD /* DefaultTodoDetailInteractor.swift in Sources */,
+				116756632917C4D900FB28CD /* TodoDetailPresenter.swift in Sources */,
+				116756652917C5D700FB28CD /* TodoDetailInteractor.swift in Sources */,
 				116756522917BBB800FB28CD /* Todo.swift in Sources */,
-				116756582917C0C700FB28CD /* DefaultTodoDetailRouter.swift in Sources */,
+				116756582917C0C700FB28CD /* TodoDetailRouter.swift in Sources */,
 				116756612917C41400FB28CD /* TodoDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -426,11 +425,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11675684292B80E300FB28CD /* TodoListViewControllerTest.swift in Sources */,
 				11675682292B7E1300FB28CD /* SpyPresenterDelegate.swift in Sources */,
 				11675680292B7CF900FB28CD /* TodoListInteractorTest.swift in Sources */,
 				116755ED291799CB00FB28CD /* TodoListPresenterTest.swift in Sources */,
 				1167567E292A51CD00FB28CD /* TodoBuilder.swift in Sources */,
-				1167567B292A4F3A00FB28CD /* SpyReloadable.swift in Sources */,
+				1167567B292A4F3A00FB28CD /* SpyTodoListViewController.swift in Sources */,
 				11675679292A489100FB28CD /* SpyTodoListRouter.swift in Sources */,
 				11675677292A20DA00FB28CD /* SpyTodoListInteractor.swift in Sources */,
 			);

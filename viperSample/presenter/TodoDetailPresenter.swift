@@ -1,12 +1,16 @@
 import UIKit
 
-protocol TodoDetailInteractor: AnyObject {
+protocol TodoDetailUseCase: AnyObject {
     func fetchTodo(_ todoId: Int)
 }
 
-final class DefaultTodoDetailPresenter: TodoDetailPresenter {
-    weak var reloadable: Reloadable?
-    var interactor: TodoDetailInteractor?
+protocol TodoDetailView: AnyObject {
+    func showDetaildata(_ todo: TodoDetail)
+}
+
+final class TodoDetailPresenter: TodoDetailPresentation {
+    weak var view: TodoDetailView?
+    var interactor: TodoDetailUseCase!
     
     var todoId: Int = 0
     
@@ -16,10 +20,14 @@ final class DefaultTodoDetailPresenter: TodoDetailPresenter {
         detail: "",
         isCompleted: false,
         deadLine: Date()
-    )
+    ) {
+        didSet {
+            self.view?.showDetaildata(todo)
+        }
+    }
     
     func viewWillAppear() {
-        self.interactor?.fetchTodo(self.todoId)
+        self.interactor.fetchTodo(self.todoId)
     }
     
     func getTodoDetail() -> TodoDetail {
@@ -27,7 +35,7 @@ final class DefaultTodoDetailPresenter: TodoDetailPresenter {
     }
 }
 
-extension DefaultTodoDetailPresenter: TodoDetailPresenterDelegate {
+extension TodoDetailPresenter: TodoDetailInteractorOutput {
     func setData(_ todo: Todo) {
         let viewData = TodoDetail(
             todoId: todo.id,
@@ -37,6 +45,5 @@ extension DefaultTodoDetailPresenter: TodoDetailPresenterDelegate {
             deadLine: todo.deadLine
         )
         self.todo = viewData
-        self.reloadable?.reload()
     }
 }
