@@ -12,46 +12,6 @@ class TodoListPresenterTest: QuickSpec {
                 presenter = TodoListPresenter()
             }
             
-            context("getTodoCount") {
-                it("returns todo overviews count") {
-                    presenter.setData([
-                        Todo.default,
-                        Todo.default
-                    ])
-                    
-                    
-                    let count = presenter.getTodoCount()
-                    
-                    
-                    expect(count).to(equal(2))
-                }
-            }
-            
-            context("getTodoOverviewAt") {
-                it("returns TodoOverview specified by index") {
-                    presenter.setData([
-                        TodoBuilder().withId(2).withTitle("hoge").build(),
-                        TodoBuilder().withId(3).withTitle("fuga").build()
-                    ])
-                    
-                    
-                    let todoOverview = presenter.getTodoOverview(at: 1)
-                    
-                    
-                    expect(todoOverview?.todoId).to(equal(3))
-                    expect(todoOverview?.title).to(equal("fuga"))
-                }
-                
-                it("returns nil when presenter has no todoOverview") {
-                    presenter.setData([])
-                    
-                    
-                    let result = presenter.getTodoOverview(at: 0)
-                    
-                    expect(result).to(beNil())
-                }
-            }
-            
             context("viewWillAppear") {
                 var spyInteractor: SpyTodoListInteractor!
                 
@@ -90,24 +50,6 @@ class TodoListPresenterTest: QuickSpec {
             }
             
             context("setData") {
-                it("convert todo to todoOverview and set it as property") {
-                    presenter.setData([
-                        Todo(
-                            id: 1,
-                            title: "hoge",
-                            detail: "",
-                            isCompleted: false,
-                            deadLine: Date(),
-                            createdOn: Date(),
-                            updatedOn: Date()
-                        )
-                    ])
-                    
-                    expect(presenter.getTodoCount()).to(equal(1))
-                    expect(presenter.getTodoOverview(at: 0)?.todoId).to(equal(1))
-                    expect(presenter.getTodoOverview(at: 0)?.title).to(equal("hoge"))
-                }
-                
                 it("passes correct data to view") {
                     let spyTodoListView = SpyTodoListViewController()
                     presenter.view = spyTodoListView

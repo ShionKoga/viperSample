@@ -31,17 +31,6 @@ final class TodoListPresenter: TodoListPresentation {
         let todoId = self.todoOverviews[index].todoId
         self.router.transitionToDetailView(todoId)
     }
-    
-    func getTodoCount() -> Int {
-        return todoOverviews.count
-    }
-    
-    func getTodoOverview(at index: Int) -> TodoOverview? {
-        if (todoOverviews.count == 0) {
-            return nil
-        }
-        return todoOverviews[index]
-    }
 }
 
 extension TodoListPresenter: TodoListInteractorOutput {

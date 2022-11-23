@@ -20,6 +20,7 @@ final class TodoListRouter: TodoListWireframe {
         let router = TodoListRouter()
         
         view.presenter = presenter
+        view.tableView = UITableView()
         presenter.view = view
         presenter.interactor = interactor
         presenter.router = router

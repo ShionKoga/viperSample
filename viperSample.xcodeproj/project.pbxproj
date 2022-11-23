@@ -34,8 +34,9 @@
 		1167567B292A4F3A00FB28CD /* SpyTodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1167567A292A4F3A00FB28CD /* SpyTodoListViewController.swift */; };
 		1167567E292A51CD00FB28CD /* TodoBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1167567D292A51CD00FB28CD /* TodoBuilder.swift */; };
 		11675680292B7CF900FB28CD /* TodoListInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1167567F292B7CF800FB28CD /* TodoListInteractorTest.swift */; };
-		11675682292B7E1300FB28CD /* SpyPresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11675681292B7E1300FB28CD /* SpyPresenterDelegate.swift */; };
+		11675682292B7E1300FB28CD /* SpyTodoListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11675681292B7E1300FB28CD /* SpyTodoListPresenter.swift */; };
 		11675684292B80E300FB28CD /* TodoListViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11675683292B80E300FB28CD /* TodoListViewControllerTest.swift */; };
+		11675686292E040E00FB28CD /* SpyTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11675685292E040E00FB28CD /* SpyTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,8 +86,9 @@
 		1167567A292A4F3A00FB28CD /* SpyTodoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyTodoListViewController.swift; sourceTree = "<group>"; };
 		1167567D292A51CD00FB28CD /* TodoBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoBuilder.swift; sourceTree = "<group>"; };
 		1167567F292B7CF800FB28CD /* TodoListInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListInteractorTest.swift; sourceTree = "<group>"; };
-		11675681292B7E1300FB28CD /* SpyPresenterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyPresenterDelegate.swift; sourceTree = "<group>"; };
+		11675681292B7E1300FB28CD /* SpyTodoListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyTodoListPresenter.swift; sourceTree = "<group>"; };
 		11675683292B80E300FB28CD /* TodoListViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewControllerTest.swift; sourceTree = "<group>"; };
+		11675685292E040E00FB28CD /* SpyTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,7 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				116755EC291799CB00FB28CD /* TodoListPresenterTest.swift */,
-				11675681292B7E1300FB28CD /* SpyPresenterDelegate.swift */,
+				11675681292B7E1300FB28CD /* SpyTodoListPresenter.swift */,
 			);
 			path = presenter;
 			sourceTree = "<group>";
@@ -253,6 +255,7 @@
 			children = (
 				1167567A292A4F3A00FB28CD /* SpyTodoListViewController.swift */,
 				11675683292B80E300FB28CD /* TodoListViewControllerTest.swift */,
+				11675685292E040E00FB28CD /* SpyTableView.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -426,8 +429,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				11675684292B80E300FB28CD /* TodoListViewControllerTest.swift in Sources */,
-				11675682292B7E1300FB28CD /* SpyPresenterDelegate.swift in Sources */,
+				11675682292B7E1300FB28CD /* SpyTodoListPresenter.swift in Sources */,
 				11675680292B7CF900FB28CD /* TodoListInteractorTest.swift in Sources */,
+				11675686292E040E00FB28CD /* SpyTableView.swift in Sources */,
 				116755ED291799CB00FB28CD /* TodoListPresenterTest.swift in Sources */,
 				1167567E292A51CD00FB28CD /* TodoBuilder.swift in Sources */,
 				1167567B292A4F3A00FB28CD /* SpyTodoListViewController.swift in Sources */,
@@ -770,8 +774,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Quick/Quick.git";
 			requirement = {
-				branch = main;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
