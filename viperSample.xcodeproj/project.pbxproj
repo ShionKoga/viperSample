@@ -37,6 +37,9 @@
 		11675682292B7E1300FB28CD /* SpyTodoListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11675681292B7E1300FB28CD /* SpyTodoListPresenter.swift */; };
 		11675684292B80E300FB28CD /* TodoListViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11675683292B80E300FB28CD /* TodoListViewControllerTest.swift */; };
 		11675686292E040E00FB28CD /* SpyTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11675685292E040E00FB28CD /* SpyTableView.swift */; };
+		11675688292F775C00FB28CD /* TodoDetailViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11675687292F775C00FB28CD /* TodoDetailViewControllerTest.swift */; };
+		1167568A292F78E700FB28CD /* SpyTodoDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11675689292F78E700FB28CD /* SpyTodoDetailPresenter.swift */; };
+		1167568C292F7F1F00FB28CD /* TodoDetailBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1167568B292F7F1F00FB28CD /* TodoDetailBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +92,9 @@
 		11675681292B7E1300FB28CD /* SpyTodoListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyTodoListPresenter.swift; sourceTree = "<group>"; };
 		11675683292B80E300FB28CD /* TodoListViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewControllerTest.swift; sourceTree = "<group>"; };
 		11675685292E040E00FB28CD /* SpyTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyTableView.swift; sourceTree = "<group>"; };
+		11675687292F775C00FB28CD /* TodoDetailViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetailViewControllerTest.swift; sourceTree = "<group>"; };
+		11675689292F78E700FB28CD /* SpyTodoDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyTodoDetailPresenter.swift; sourceTree = "<group>"; };
+		1167568B292F7F1F00FB28CD /* TodoDetailBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetailBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,6 +235,7 @@
 			children = (
 				116755EC291799CB00FB28CD /* TodoListPresenterTest.swift */,
 				11675681292B7E1300FB28CD /* SpyTodoListPresenter.swift */,
+				11675689292F78E700FB28CD /* SpyTodoDetailPresenter.swift */,
 			);
 			path = presenter;
 			sourceTree = "<group>";
@@ -256,6 +263,7 @@
 				1167567A292A4F3A00FB28CD /* SpyTodoListViewController.swift */,
 				11675683292B80E300FB28CD /* TodoListViewControllerTest.swift */,
 				11675685292E040E00FB28CD /* SpyTableView.swift */,
+				11675687292F775C00FB28CD /* TodoDetailViewControllerTest.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -264,6 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				1167567D292A51CD00FB28CD /* TodoBuilder.swift */,
+				1167568B292F7F1F00FB28CD /* TodoDetailBuilder.swift */,
 			);
 			path = entity;
 			sourceTree = "<group>";
@@ -429,10 +438,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				11675684292B80E300FB28CD /* TodoListViewControllerTest.swift in Sources */,
+				1167568A292F78E700FB28CD /* SpyTodoDetailPresenter.swift in Sources */,
 				11675682292B7E1300FB28CD /* SpyTodoListPresenter.swift in Sources */,
 				11675680292B7CF900FB28CD /* TodoListInteractorTest.swift in Sources */,
 				11675686292E040E00FB28CD /* SpyTableView.swift in Sources */,
 				116755ED291799CB00FB28CD /* TodoListPresenterTest.swift in Sources */,
+				1167568C292F7F1F00FB28CD /* TodoDetailBuilder.swift in Sources */,
+				11675688292F775C00FB28CD /* TodoDetailViewControllerTest.swift in Sources */,
 				1167567E292A51CD00FB28CD /* TodoBuilder.swift in Sources */,
 				1167567B292A4F3A00FB28CD /* SpyTodoListViewController.swift in Sources */,
 				11675679292A489100FB28CD /* SpyTodoListRouter.swift in Sources */,

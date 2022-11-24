@@ -18,8 +18,7 @@ final class TodoDetailPresenter: TodoDetailPresentation {
         todoId: 0,
         title: "",
         detail: "",
-        isCompleted: false,
-        deadLine: Date()
+        isCompleted: false
     ) {
         didSet {
             self.view?.showDetaildata(todo)
@@ -41,8 +40,7 @@ extension TodoDetailPresenter: TodoDetailInteractorOutput {
             todoId: todo.id,
             title: todo.title,
             detail: todo.detail,
-            isCompleted: todo.isCompleted,
-            deadLine: todo.deadLine
+            isCompleted: todo.isCompleted
         )
         self.todo = viewData
     }

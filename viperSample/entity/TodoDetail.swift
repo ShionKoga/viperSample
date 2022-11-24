@@ -5,5 +5,4 @@ struct TodoDetail {
     let title: String
     let detail: String
     let isCompleted: Bool
-    let deadLine: Date
 }
